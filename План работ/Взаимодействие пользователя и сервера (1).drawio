@@ -1,31 +1,28 @@
-<mxfile host="app.diagrams.net" modified="2023-04-11T10:15:31.242Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.5005.167 YaBrowser/22.7.3.822 Yowser/2.5 Safari/537.36" etag="Dct42QCURpUsWYe0iiEZ" version="21.1.5" type="device">
+<mxfile host="app.diagrams.net" modified="2023-04-12T07:25:57.034Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.0.0 YaBrowser/23.3.1.895 Yowser/2.5 Safari/537.36" etag="qDJww3cGt82bChWzuVk2" version="21.1.5" type="device">
   <diagram name="Страница 1" id="drIG9qG10kWce2cWh1Kh">
-    <mxGraphModel dx="871" dy="481" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1002" dy="553" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="SXOTjNvAS6LuZ1P654HD-1" value="Пользователь" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
-          <mxGeometry x="150" y="230" width="30" height="60" as="geometry" />
+        <mxCell id="SXOTjNvAS6LuZ1P654HD-1" value="Пользователь" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" parent="1" vertex="1">
+          <mxGeometry x="160" y="270" width="30" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="SXOTjNvAS6LuZ1P654HD-2" value="Сервер" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="414" y="140" width="120" height="60" as="geometry" />
+        <mxCell id="SXOTjNvAS6LuZ1P654HD-2" value="Сервер" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="270" width="120" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="SXOTjNvAS6LuZ1P654HD-3" value="Игрок сделал ход(1)" style="endArrow=classic;html=1;rounded=0;strokeColor=#999900;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="SXOTjNvAS6LuZ1P654HD-1" target="SXOTjNvAS6LuZ1P654HD-2">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxCell id="SXOTjNvAS6LuZ1P654HD-3" value="&lt;br&gt;" style="endArrow=classic;html=1;rounded=0;strokeColor=#999900;exitX=1;exitY=0.3333333333333333;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="SXOTjNvAS6LuZ1P654HD-1" target="SXOTjNvAS6LuZ1P654HD-2" edge="1">
+          <mxGeometry x="1" y="-153" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="270" y="170" as="sourcePoint" />
             <mxPoint x="320" y="120" as="targetPoint" />
+            <mxPoint x="41" y="-28" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SXOTjNvAS6LuZ1P654HD-4" value="Сервер обработал и&amp;nbsp; вернул итог(2)" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#00CC00;" edge="1" parent="1" source="SXOTjNvAS6LuZ1P654HD-2" target="SXOTjNvAS6LuZ1P654HD-1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="310" y="320" as="sourcePoint" />
-            <mxPoint x="360" y="270" as="targetPoint" />
+        <mxCell id="iq4v_wgyZzh4aaS-EKHV-1" value="Результат игры записывается на сервер" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" parent="SXOTjNvAS6LuZ1P654HD-3" vertex="1" connectable="0">
+          <mxGeometry x="0.1111" y="-2" relative="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SXOTjNvAS6LuZ1P654HD-5" value="Сервер хранит информацию о:&lt;br&gt;Очередности ходов игроков&lt;br&gt;Состояние полей(2 поля с модификаторами видимости)&lt;br&gt;Таймер хода" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="320" y="30" width="310" height="100" as="geometry" />
-        </mxCell>
-        <mxCell id="SXOTjNvAS6LuZ1P654HD-6" value="Клиент хранит:&lt;br&gt;Данные пользователя&lt;br&gt;Рейтинг(Необязательно)&lt;br&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+        <mxCell id="SXOTjNvAS6LuZ1P654HD-6" value="Клиент хранит:&lt;br&gt;Данные пользователя&lt;br&gt;Очередности ходов игроков&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;Состояние полей(2 поля с модификаторами видимости)&lt;br&gt;Рейтинг(Необязательно)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="92.5" y="150" width="145" height="30" as="geometry" />
         </mxCell>
       </root>
