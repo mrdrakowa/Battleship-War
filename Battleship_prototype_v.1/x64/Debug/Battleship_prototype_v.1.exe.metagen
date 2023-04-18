@@ -21,5 +21,6 @@ Class Battleshipprototypev1.MyForm1: AutoLayout, AnsiClass, Class, Public, Befor
     System.Windows.Forms.Button[] enemyMap : Public
     Int32 cellSize : Public
   Methods:
-    buildForm(): PrivateScope, Public, HideBySig
+    BuildForm(): PrivateScope, Public, HideBySig
     CreateMap(): PrivateScope, Public, HideBySig
+    GenerateMap(): PrivateScope, Public, HideBySig

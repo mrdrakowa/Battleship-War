@@ -22,13 +22,14 @@ namespace Battleshipprototypev1 {
 		MyForm1(void)
 		{
 			InitializeComponent();
-			buildForm();
+			BuildForm();
 		}
 		Int32 cellSize = 25;
 		
-		void buildForm()
+		void BuildForm()
 		{
 			CreateMap();
+			GenerateMap();
 		}
 
 		void CreateMap()
@@ -57,6 +58,69 @@ namespace Battleshipprototypev1 {
 					enemyMap[(i - 1) * 10 + (j - 1)] = buttonEnemy;
 					Controls->Add(enemyMap[(i - 1) * 10 + (j - 1)]);
 				}
+			}
+		}
+
+		void GenerateMap()
+		{
+			Random^ rand = gcnew Random();
+			int ship = 0;
+			while (ship < 4)
+			{
+				int x = rand->Next() % 100;
+				
+				if (x - 1 >= 0 && x + 1 < 100)
+				{
+					bool flag = false;
+					if (myMap[x - 1]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+					if (myMap[x + 1]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+					
+				}
+				if(x - 10 > 0 && x + 10 < 100)
+				{
+					if (myMap[x - 10]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+					if (myMap[x + 10]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+				}
+				if (x - 11 >= 0 && x + 11 < 100)
+				{
+					if (myMap[x - 11]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+					if (myMap[x + 11]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+				}
+				if (x - 9 >= 0 && x + 9 < 100)
+				{
+					if (myMap[x - 9]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+					if (myMap[x + 9]->BackColor == System::Drawing::Color::Aqua)
+					{
+						continue;
+					}
+				}
+				if (myMap[x]->BackColor == System::Drawing::Color::Aqua)
+				{
+					continue;
+				}
+				myMap[x]->BackColor = System::Drawing::Color::Aqua;
+				ship++;
 			}
 		}
 
