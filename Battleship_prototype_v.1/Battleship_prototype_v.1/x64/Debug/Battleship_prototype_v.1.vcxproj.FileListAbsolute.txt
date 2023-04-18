@@ -1,0 +1,2 @@
+C:\Users\Администратор\Desktop\Морской бой\Battleship_prototype_v.1\Battleship_prototype_v.1\x64\Debug\Battleship_prototype_v.1.vcxproj.AssemblyReference.cache
+C:\Users\Администратор\Desktop\Морской бой\Battleship_prototype_v.1\Battleship_prototype_v.1\x64\Debug\Battleship_prototype_v.1.vcxproj.SuggestedBindingRedirects.cache

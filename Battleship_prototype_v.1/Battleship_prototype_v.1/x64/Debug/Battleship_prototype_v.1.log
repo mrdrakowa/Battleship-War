@@ -1,0 +1,6 @@
+﻿  Main.cpp
+C:\Users\Администратор\Desktop\Морской бой\Battleship_prototype_v.1\Battleship_prototype_v.1\MyForm.h(36,79): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Администратор\Desktop\Морской бой\Battleship_prototype_v.1\Battleship_prototype_v.1\MyForm.h(36,59): warning C4244: аргумент: преобразование "double" в "int", возможна потеря данных
+C:\Users\Администратор\Desktop\Морской бой\Battleship_prototype_v.1\Battleship_prototype_v.1\Main.cpp(6,1): warning C4829: Возможно, неправильные параметры функции main. Рекомендуемый вариант - "int main(Platform::Array<Platform::String^>^ argv)"
+  Main.obj : обнаружен модуль MSIL; для MSIL последовательная компоновка отключена; выполняется полная компоновка
+  Battleship_prototype_v.1.vcxproj -> C:\Users\Администратор\Desktop\Морской бой\Battleship_prototype_v.1\x64\Debug\Battleship_prototype_v.1.exe
