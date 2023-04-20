@@ -18,9 +18,16 @@ Class Battleshipprototypev1.MyForm1: AutoLayout, AnsiClass, Class, Public, Befor
     Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
   Fields:
     System.Windows.Forms.Button[] myMap : Public
+    Int32[] myMap_int : Public
     System.Windows.Forms.Button[] enemyMap : Public
     Int32 cellSize : Public
   Methods:
     BuildForm(): PrivateScope, Public, HideBySig
     CreateMap(): PrivateScope, Public, HideBySig
+    PositionCheck(Int32): PrivateScope, Public, HideBySig
+    DrawShip(Int32): PrivateScope, Public, HideBySig
+    Generate_1Ships(): PrivateScope, Public, HideBySig
+    Generate_2Ships(): PrivateScope, Public, HideBySig
+    Generate_3Ships(): PrivateScope, Public, HideBySig
+    Generate_4Ships(): PrivateScope, Public, HideBySig
     GenerateMap(): PrivateScope, Public, HideBySig
