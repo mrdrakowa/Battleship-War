@@ -23,7 +23,10 @@
     <ClInclude Include="MyForm.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="Generate ship.h">
+    <ClInclude Include="EnemyForm.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

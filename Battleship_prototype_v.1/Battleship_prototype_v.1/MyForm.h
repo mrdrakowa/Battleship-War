@@ -1,7 +1,7 @@
 #pragma once
 #include<vector>
+#include"Server.h"
 #include<string>
-
 namespace Battleshipprototypev1 {
 
 	using namespace std;
@@ -32,13 +32,29 @@ namespace Battleshipprototypev1 {
 			
 		}
 		Int32 cellSize = 25;
-		
 		void BuildForm()
 		{
 			CreateMap();
 			GenerateMap();
 		}
-
+		void ButtonStart_click(System::Object^ sender, System::EventArgs^ e)
+		{
+		}
+		void Button_click(System::Object^ sender, System::EventArgs^ e)
+		{
+			Button^ btn = safe_cast<Button^>(sender);
+			for (int i = 0; i < 100; i++)
+			{
+				if(btn->Location == enemyMap[i]->Location)
+				{
+					Check(i);
+					btn->Text = L"X";
+				}
+				
+			}
+			
+			
+		}
 		void CreateMap()
 		{
 			this->Size = System::Drawing::Size(cellSize * 10 * 3.5 + 10, cellSize * 10 * 1.7);
@@ -50,6 +66,7 @@ namespace Battleshipprototypev1 {
 					button->Size = System::Drawing::Size(cellSize, cellSize);
 					button->Location = System::Drawing::Point(cellSize * j, cellSize * i);
 					myMap[(i - 1) * 10 + (j - 1)] = button;
+				
 					Controls->Add(myMap[(i - 1) * 10 + (j - 1)]);
 				}
 			}
@@ -63,10 +80,20 @@ namespace Battleshipprototypev1 {
 					buttonEnemy->Size = System::Drawing::Size(cellSize, cellSize);
 					buttonEnemy->Location = System::Drawing::Point(cellSize * j+ cellSize * 10 * 2+50, cellSize * i);
 					enemyMap[(i - 1) * 10 + (j - 1)] = buttonEnemy;
+					buttonEnemy->Click += gcnew EventHandler(this, &MyForm1::Button_click);
+				
 					Controls->Add(enemyMap[(i - 1) * 10 + (j - 1)]);
 				}
 			}
+			Button^ buttonStart = gcnew Button();
+			buttonStart->Size = System::Drawing::Size(cellSize*6, cellSize*3);
+			buttonStart->Location = System::Drawing::Point(cellSize * 10 * 1.4 , cellSize * 10+15);
+			buttonStart->Text = L"Start";
+			buttonStart->Click += gcnew EventHandler(this, &MyForm1::ButtonStart_click);
+			Controls->Add(buttonStart);
+
 		}
+
 		bool PositionCheck(int x)
 		{		
 			//Right and Left
@@ -349,8 +376,6 @@ namespace Battleshipprototypev1 {
 			Generate_2Ships();
 			Generate_1Ships();
 		}
-
-
 	protected:
 	
 		~MyForm1()
