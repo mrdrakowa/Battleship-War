@@ -1,5 +1,8 @@
 #pragma once
-
+#include<vector>
+#include"Server.h"
+#include<string>
+bool Check(int x, int player);
 namespace Battleshipprototypev1 {
 
 	using namespace System;
@@ -12,15 +15,14 @@ namespace Battleshipprototypev1 {
 	/// <summary>
 	/// Сводка для MyForm11
 	/// </summary>
+	
 	public ref class EnemyForm : public System::Windows::Forms::Form
 	{
-	public:
 	public:
 		cli::array<Button^>^ myMap = gcnew cli::array <Button^>(100);
 		cli::array<int>^ myMap_int = gcnew cli::array <int>(100);
 		cli::array<Button^>^ enemyMap = gcnew cli::array <Button^>(100);
-
-
+		int player = 2;
 		EnemyForm(void)
 		{
 			InitializeComponent();
@@ -41,19 +43,25 @@ namespace Battleshipprototypev1 {
 		void ButtonStart_click(System::Object^ sender, System::EventArgs^ e)
 		{
 		}
+		
 		void Button_click(System::Object^ sender, System::EventArgs^ e)
 		{
-			Button^ btn = safe_cast<Button^>(sender);
-			for (int i = 0; i < 100; i++)
+			int q = 2;
+			
+
+			if(1)
 			{
-				if (btn->Location == enemyMap[i]->Location)
+				Button^ btn = safe_cast<Button^>(sender);
+				for (int i = 0; i < 100; i++)
 				{
-					//Check(i);
-					btn->Text = L"X";
+					if (btn->Location == enemyMap[i]->Location)
+					{
+						if (Check(i, player))
+						btn->Text = L"X";
+					}
+
 				}
-
 			}
-
 
 		}
 		void CreateMap()

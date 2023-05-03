@@ -19,10 +19,13 @@ namespace Battleshipprototypev1 {
 		cli::array<Button^>^ myMap = gcnew cli::array <Button^>(100);
 		cli::array<int>^ myMap_int = gcnew cli::array <int>(100);
 		cli::array<Button^>^ enemyMap = gcnew cli::array <Button^>(100);
-
-		
+		int player = 1;
 		MyForm1(void)
 		{
+			
+			EnemyForm^ frm = gcnew EnemyForm();
+			frm->Show();
+			this->Hide();
 			InitializeComponent();
 			for (int i = 0; i < 100; i++)
 			{
@@ -42,17 +45,19 @@ namespace Battleshipprototypev1 {
 		}
 		void Button_click(System::Object^ sender, System::EventArgs^ e)
 		{
-			Button^ btn = safe_cast<Button^>(sender);
-			for (int i = 0; i < 100; i++)
-			{
-				if(btn->Location == enemyMap[i]->Location)
+			if(step == 1)
+			{ 
+				Button^ btn = safe_cast<Button^>(sender);
+				for (int i = 0; i < 100; i++)
 				{
-					Check(i);
-					btn->Text = L"X";
-				}
+					if(btn->Location == enemyMap[i]->Location)
+					{
+						if(Check(i, player))
+						btn->Text = L"X";
+					}
 				
+				}
 			}
-			
 			
 		}
 		void CreateMap()

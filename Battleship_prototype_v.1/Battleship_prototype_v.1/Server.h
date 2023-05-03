@@ -5,7 +5,25 @@
 using namespace System;
 using namespace System::Windows::Forms;
 
-int Check(int x)
+int step = 1;
+
+bool Check(int x, int player)
 {
-	return 3;
+	if (player == step)
+	{
+		if (player == 1)
+		{
+			step = 2;
+		}
+		else
+		{
+			step = 1;
+		}
+
+		return true;
+	}
+	else
+	{
+		return false;
+	}
 }
